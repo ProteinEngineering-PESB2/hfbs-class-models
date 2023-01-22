@@ -1,0 +1,14 @@
+# Hydrophobins and Cerato platanins identification using machine learning approaches
+
+## Abstract
+
+Hydrophobins and cerato platanins are proteins of great biotechnological interest thanks to their capabilities as nanodevices and biosensors, being useful in medicine, pharmacology, and mining. These proteins are hydrophobic and are characterized by being rich in cysteines, exclusive to the kingdom fungi, and having low rates of phylogenetic conversation, which makes it difficult to functionally classify unknown sequences in this type of protein via the classic similarity-dependent functional annotation systems of sequences. In this work, we propose the first hybrid system for evaluating novel protein sequences using statistical filters of the probability of existence in sample spaces and assembled models of functional classification for hydrophobins and cerato platanins proteins. Both systems contemplate as a basis the use of numerical representations of protein sequences combining amino acid coding based on physicochemical properties and transformations in the space of the signals via Fourier transforms. The statistical filter system allows defining sample spaces of sequences with known functions and estimates the probability of existing in the defined spaces of unknown sequences. The assembled model of functional classification classifies protein sequences into hydrophobins class I and class II and cerato platanins. The classifier achieved a performance of 99\% precision. It facilitated the functional annotation of more than 5000 protein sequences reported as hydrophobins that do not meet the patterns defined in the literature. It showed a high capacity for functional recognition provided by the representation strategies in signal space. Both the methodology and the results demonstrate the proposed method's usefulness, applying to proteins with similar functions or as a strategy for constructing negative examples in data sets for training classification models.
+
+## Folder description
+
+- **input_encoders**: Physicochemical encoders used for coding the protein sequences [See the paper](https://www.frontiersin.org/articles/10.3389/fmolb.2022.898627/full).
+- **input_sequences**: Sequences downloaded from Uniprot annotated like HFbs or CPs proteins.
+- **process_sequences**: Has all sequences processed using the filters and cys-patterns dived into different subfolder by function classification.
+- **source_code**: Has all scripts implemented to develop the proposed method, check the datasets, and classify the unknown HFBs protein sequences.
+- **training_models**: Has all developed models, the performances and the instance of models via joblib.
+- **unknown_hfbs_class**: Has the process related to functional classifications for unknow protein sequences.
